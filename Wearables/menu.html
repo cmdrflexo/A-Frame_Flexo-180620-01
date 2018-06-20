@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wearable (Menu)</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+	<script src='https://sdk.altvr.com/libs/altspace.js/2.6.0/altspace.min.js'></script>
+	<!--script src='lib/altspace.js'></script-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
+	<link rel='stylesheet' href='menu.css'/>
+</head>
+<body>
+	<div id='container'>
+		<h1>Choose your tie:</h1>
+		<ul class='wearable-selector' data-wearable-group='neck'>
+			<li id='none' data-wearable>
+				(None)
+			</li>
+			<li data-wearable='Tie1/BillNyeTies'>
+				<img src='thumbnails/Rubenoid_BillNye_Tie1.png' />
+			</li>
+			<li data-wearable='Tie2/BillNyeTies'>
+				<img src='thumbnails/Rubenoid_BillNye_Tie2.png' />
+			</li>
+			<li data-wearable='Tie3/BillNyeTies'>
+				<img src='thumbnails/Rubenoid_BillNye_Tie3.png' />
+			</li>
+			<li data-wearable='Tie4/BillNyeTies'>
+				<img src='thumbnails/Rubenoid_BillNye_Tie4.png' />
+			</li>
+		</ul>
+	</div>
+
+	<script src='wearable-menu.js'></script>
+</body>
+</html>
