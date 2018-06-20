@@ -68,7 +68,8 @@ AFRAME.registerComponent('wearable', {
 				if(/^robothead/.test(avatarId))
 					self.el.setAttribute('n-skeleton-parent', 'part', 'head');
 				else
-					self.el.setAttribute('n-skeleton-parent', 'part', 'neck');
+					//self.el.setAttribute('n-skeleton-parent', 'part', 'neck');
+					self.el.setAttribute('n-skeleton-parent', 'part', 'head');
 			}
 		});
 	},
