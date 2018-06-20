@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html><body>
-<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.2/dist/altspace.min.js"></script>
+<script src = "https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src = "https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.2/dist/altspace.min.js"></script>
 
 <!-- set up the scene -->
-<a-scene altspace='vertical-align: bottom;'>
+<a-scene altspace = 'vertical-align: bottom;'>
 
-test
-    <!-- add the moon to the scene -->
-    <a-sphere position='0 1.5 0'>
-        <!-- add an animation to make it rotate -->
-        <a-animation to='0 360 0' easing='linear' dur='20000' repeat='indefinite'/>
-    </a-sphere>
-
-    <!-- add the backdrop of stars -->
-    <a-sky src='#stars' radius='2500'></a-sky>
-
-    <!-- add a view camera (2d only) -->
-    <a-entity position='0 0 2'>
+    <!-- preload all our textures -->
+    <a-assets>
+		<!-- Flexo Head -->
+		<a-asset-item 
+			id = "flexo_head-obj" 
+			src = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/flexo/flexo_head.obj"
+		></a-asset-item>
+		<a-asset-item 
+			id = "flexo_head-mtl" 
+			src = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/flexo/flexo_head.mtl"
+		></a-asset-item>
+		<!-- Background -->
+        <img id = 'stars' src = 'https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/sky/stars.jpg'/>
+		
+		
+    </a-assets>
+	
+	<!-- Flexo Head -->
+	<a-entity 
+		obj-model = "obj: #flexo_head-obj; 
+		mtl: #flexo_head-mtl";
+		position = '0 1.5 0'
+	>
+		<a-animation to = '0 360 0' easing = 'linear' dur = '10000' repeat = 'indefinite'/>
+	</a-entity>
+	
+	<!-- Background -->
+    <a-sky src = '#stars' radius = '2500'></a-sky>
+	
+	
+	
+	<!-- Camera -->
+    <a-entity 
+		position = '1 0 0'
+		rotation = '0 90 0'
+	>
         <a-camera></a-camera>
     </a-entity>
 
