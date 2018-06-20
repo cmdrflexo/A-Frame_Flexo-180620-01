@@ -1,120 +1,24 @@
 <!DOCTYPE html>
 <html><body>
-<script src = "https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-<script src = "https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.2/dist/altspace.min.js"></script>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/AltspaceSDK/v2.0.2/dist/altspace.min.js"></script>
 
 <!-- set up the scene -->
-<a-scene altspace = 'vertical-align: bottom;'>
+<a-scene altspace='vertical-align: bottom;'>
 
     <!-- preload all our textures -->
     <a-assets>
-		<!-- Flexo Head -->
-		<a-asset-item 
-			id = "flexo_head-obj" 
-			src = "/assets/flexo/flexo_head.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "flexo_head-mtl" 
-			src = "/assets/flexo/flexo_head.mtl"
-		></a-asset-item>
-		<!-- Background -->
-        <img id = 'stars' src = 'assets/sky/stars.jpg'/>
-		<!-- Shield -->
-		<a-asset-item 
-			id = "shield-obj_high" 
-			src = "/assets/station-01/shield_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "shield-mtl_high" 
-			src = "/assets/station-01/shield_high.mtl"
-		></a-asset-item>
-		<!-- Mast -->
-		<a-asset-item 
-			id = "mast-obj_high" 
-			src = "/assets/station-01/mast_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "mast-mtl_high" 
-			src = "/assets/station-01/mast_high.mtl"
-		></a-asset-item>
-		<!-- Engines -->
-		<a-asset-item 
-			id = "engines-obj_high" 
-			src = "/assets/station-01/engines_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "engines-mtl_high" 
-			src = "/assets/station-01/engines_high.mtl"
-		></a-asset-item>
-		<!-- Containers -->
-		<a-asset-item 
-			id = "containers-obj_high" 
-			src = "/assets/station-01/containers_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "containers-mtl_high" 
-			src = "/assets/station-01/containers_high.mtl"
-		></a-asset-item>
-		<!-- Ring A -->
-		<a-asset-item 
-			id = "ringA-obj_high" 
-			src = "/assets/station-01/ring-a_high.obj"></a-asset-item>
-		<a-asset-item 
-			id = "ringA-mtl_high" 
-			src = "/assets/station-01/ring-a_high.mtl"
-		></a-asset-item>
-		<!-- Ring B -->
-		<a-asset-item 
-			id = "ringB-obj_high" 
-			src = "/assets/station-01/ring-b_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "ringB-mtl_high" 
-			src = "/assets/station-01/ring-b_high.mtl"
-		></a-asset-item>
-		<!-- Tethers -->
-		<a-asset-item 
-			id = "tethers-obj_high" 
-			src = "/assets/station-01/tethers_high.obj"
-		></a-asset-item>
-		<a-asset-item 
-			id = "tethers-mtl_high" 
-			src = "/assets/station-01/tethers_high.mtl"
-		></a-asset-item>
-		
+        <img id='stars' src='https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/sky/stars.jpg'/>
     </a-assets>
-	
-	<!-- Flexo Head -->
-	<a-entity 
-		obj-model = "obj: #flexo_head-obj; 
-		mtl: #flexo_head-mtl";
-		position = '0 1.5 0'
-	>
-		<a-animation to = '0 360 0' easing = 'linear' dur = '10000' repeat = 'indefinite'/>
-	</a-entity>
-	
-	<!-- Background -->
-    <a-sky src = '#stars' radius = '2500'></a-sky>
-	
-	
-	
-	<!-- Camera -->
-    <a-entity 
-		position = '1 0 0'
-		rotation = '0 90 0'
-	>
+
+    <!-- add the backdrop of stars -->
+    <a-sky src='#stars' radius='2500'></a-sky>
+
+    <!-- add a view camera (2d only) -->
+    <a-entity position='0 0 2'>
         <a-camera></a-camera>
     </a-entity>
 
 </a-scene>
 
 </body></html>
-
-
-
-
-<a-assets>
-    
-  </a-assets>
-
-  <a-entity obj-model = "obj: #tree-obj; mtl: #tree-mtl"></a-entity>
