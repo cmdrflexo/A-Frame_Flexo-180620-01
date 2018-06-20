@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wearable</title>
+	<script src='https://aframe.io/releases/0.3.0/aframe.min.js'></script>
+	<script src='lib/altspace.js?v=3'></script>
+	<script src='wearable-aframe.js'></script>
+</head>
+<body>
+<a-scene altspace='fullspace: true' sync-system='app: Wearables; author: AltspaceVR; ref-url: https://altspace-wearables.firebaseio.com/;' wearable-menu>
+
+	<a-assets>
+
+		<!-- models -->
+		<a-asset-item 
+			class='model Tie1' 
+			src='https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/flexo/flexo_head.obj'
+		></a-asset-item>
+
+		<!-- textures -->
+		<img 
+			class='texture BillNyeTies' 
+			src='https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/flexo/textures/flexo_head.png'
+		></img>
+
+		<!-- mixins -->
+		<a-mixin id='tie'
+			n-skeleton-parent='part: neck' rotation='0 180 0' scale='0.015 0.015 0.015'
+			collapse-model sync sync-n-skeleton-parent
+			obj-model material='shader: flat' wearable='group: neck'
+		></a-mixin>
+
+	</a-assets>
+
+	<a-entity one-per-user='mixin: tie;'></a-entity>
+
+</a-scene>
+</body>
+</html>
