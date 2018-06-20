@@ -6,10 +6,12 @@
 <!-- set up the scene -->
 <a-scene altspace='vertical-align: bottom;'>
 
-    <!-- preload all our textures -->
-    <a-assets>
-        <img id='stars' src='https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Station/assets/sky/stars.jpg'/>
-    </a-assets>
+
+    <!-- add the moon to the scene -->
+    <a-sphere position='0 1.5 0'>
+        <!-- add an animation to make it rotate -->
+        <a-animation to='0 360 0' easing='linear' dur='20000' repeat='indefinite'/>
+    </a-sphere>
 
     <!-- add the backdrop of stars -->
     <a-sky src='#stars' radius='2500'></a-sky>
