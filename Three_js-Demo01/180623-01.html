@@ -20,14 +20,16 @@
 			var item;
 			var itemModel;
 			
-			var directory = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/";
+			// var directory = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/";
 			
-			function main(connection) {
-				this.connection = connection
+			function main(_connection) {
+				connection = _connection
 				sim = new altspace.utilities.Simulation();
 				loadItemModel(
-					directory + "large_sidewalk-corner.obj",
-					directory + "large_sidewalk-corner.mtl"
+					// directory + "large_sidewalk-corner.obj",
+					// directory + "large_sidewalk-corner.mtl"
+					"https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/large_sidewalk-corner.obj",
+					"https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/large_sidewalk-corner.mtl"
 				);
 			}
 
