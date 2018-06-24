@@ -48,7 +48,7 @@
 			)
 		);
 		box.name = "BOX(" + pos.x + ", " + pos.z + ")";
-		box.position.set(pos.x * 10, -10 + Math.random(), pos.z * 10);
+		box.position.set(pos.x * 10, -(10 * Math.random()), pos.z * 10);
 		sim.scene.add(box);
 		return box;
 	}
