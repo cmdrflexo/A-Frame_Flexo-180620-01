@@ -19,7 +19,6 @@
 	var boxModel;
 
 	var size = 10;
-	var sceneObjects = SceneObject[size, size];
 
 	function connect(connection) {
 		this.connection = connection;
@@ -63,8 +62,8 @@
 
 	function ready() {
 		var x, z;
-		for(z = 0; z < 10; z++)
-			for(x = 0; x < 10; x++) { 
+		for(z = 0; z < size; z++)
+			for(x = 0; x < size; x++) { 
 				var box = sceneSync.instantiate("Box", {x : x, z : z});
 			}
 		
