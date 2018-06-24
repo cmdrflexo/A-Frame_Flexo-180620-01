@@ -71,7 +71,6 @@
 
 		
 	var config = { authorId : "Flexo", appId : "2d_instantiate" };
-	altspace.utilities.sync.connect(config).then(start(connection));
 	altspace.utilities.sync.connect(config).then(
 		function(connection) { start(connection); }
 	);
