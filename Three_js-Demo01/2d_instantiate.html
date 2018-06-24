@@ -14,8 +14,8 @@
 	var sim;
 	var connection;
 	var sceneSync;
-	var objFileURL = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/road_edge.obj";
-	var mtlFileURL = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/road_edge.mtl";
+	var objFileURL = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/road-edge.obj";
+	var mtlFileURL = "https://cmdrflexo.github.io/A-Frame_Flexo-180620-01/Scene/Grid Objects/road-edge.mtl";
 	var boxModel;
 
 	var size = 10;
@@ -48,7 +48,7 @@
 			)
 		);
 		box.name = "BOX(" + pos.x + ", " + pos.z + ")";
-		box.position.set(pos.x * 10, Math.random() * -10, pos.z * 10);
+		box.position.set(pos.x * 10, 0, pos.z * 10);
 		sim.scene.add(box);
 		return box;
 	}
