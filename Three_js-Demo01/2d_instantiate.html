@@ -20,8 +20,8 @@
 
 	var size = 10;
 
-	function connect(_connection) {
-		this.connection = _connection;
+	function start(_connection) {
+		connection = _connection;
 		sim = new altspace.utilities.Simulation();
 		loadModel();
 	}
@@ -71,7 +71,10 @@
 
 		
 	var config = { authorId : "Flexo", appId : "2d_instantiate" };
-	altspace.utilities.sync.connect(config).then(connect(connection));
+	altspace.utilities.sync.connect(config).then(start(connection));
+	altspace.utilities.sync.connect(config).then(
+		function(connection) { start(connection); }
+	);
 
 </script>
 </html>
